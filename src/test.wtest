@@ -1,0 +1,15 @@
+import elementos.*
+
+
+test "barrios" {
+
+
+    var hogar1 = new Hogar(nivelDeMugre = 20, confort = 50)
+	var huerta1 = new Huerta(capacidadDeProduccion = 1000)
+
+    var barrioLuna = new Barrios()
+	barrioLuna.agregarElementos([hogar1, huerta1])
+	barrioLuna.agregarElemento(new Hogar(nivelDeMugre = 500, confort = 30)) 
+    assert.that(hogar1.esBueno())
+ 
+}
